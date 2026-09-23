@@ -1,0 +1,20 @@
+# Artefatos gerados localmente
+**/ncbi_dataset/
+**/ncbi_dataset.zip
+**/*.log
+**/*.html
+**/*.phy
+**/*.tree
+**/*.bak
+**/*.tmp
+
+# Ambientes virtuais e cache
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Sinais do editor
+.DS_Store
+.git/
