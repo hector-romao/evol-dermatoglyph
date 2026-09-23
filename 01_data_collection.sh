@@ -6,7 +6,7 @@ OUTPUT_DIR="${2:-data}"
 API_KEY="${NCBI_API_KEY:-}"
 
 if [[ ! -f "$DATA_FILE" ]]; then
-  echo "Arquivo de entrada não encontrado: $DATA_FILE" >&2
+  echo "Input file not found: $DATA_FILE" >&2
   exit 1
 fi
 
@@ -19,7 +19,7 @@ while IFS=$'\t' read -r species accession || [[ -n "${species:-}" || -n "${acces
   species_dir="$OUTPUT_DIR/$species"
   mkdir -p "$species_dir"
 
-  echo "Baixando dados para $species ($accession)"
+  echo "Downloading data for $species ($accession)"
 
   if [[ -n "$API_KEY" ]]; then
     datasets download genome accession "$accession" \
@@ -33,7 +33,7 @@ while IFS=$'\t' read -r species accession || [[ -n "${species:-}" || -n "${acces
   fi
 
   unzip -o "$species_dir/ncbi_dataset.zip" -d "$species_dir"
-  echo "Dados de $species armazenados em $species_dir"
+  echo "Data for $species stored in $species_dir"
 
 done < "$DATA_FILE"
 

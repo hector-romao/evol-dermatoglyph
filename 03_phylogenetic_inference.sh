@@ -8,7 +8,7 @@ THREADS="${THREADS:-16}"
 mkdir -p "$OUT_DIR"
 
 if command -v conda >/dev/null 2>&1; then
-  echo "Ativando ambiente BUSCO_phylogenomics, se disponível."
+  echo "Activating the BUSCO_phylogenomics environment if available."
   conda activate BUSCO_phylogenomics || true
 fi
 
