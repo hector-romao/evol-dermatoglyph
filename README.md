@@ -17,7 +17,7 @@ This repository contains a set of scripts to:
 
 ## Repository structure
 
-# 01. 
+### 01. Phylogenetic Reconstruction and Evolutionary Analyses of Orthologous Genes
 - `01_data_collection.sh` — genome download pipeline
 - `02_quality_assessment.sh` — isoform filtering and BUSCO evaluation
 - `03_phylogenetic_inference.sh` — alignment, trimming, concatenation, and IQ-TREE
