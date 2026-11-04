@@ -1,10 +1,12 @@
 # evol-dermatoglyph
 
-Pipeline for genomic data collection, quality assessment, phylogenetic inference, and evolutionary analysis of primate genomes and orthologs.
+Pipeline for genomic data collection, quality assessment, phylogenetic inference, and evolutionary analyses of primate genomes and orthologous genes, supporting the reproducibility and data availability of the study “Evolutionary Dynamics of Dermatoglyph-Associated Genes: From Primate Divergence to Variation in Human Populations.”
 
 ## Overview
 
 This repository contains a set of scripts to:
+
+# 01. Comparative analysis of primate phylogeny
 
 1. download genome data from NCBI;
 2. filter isoforms and prepare proteins of interest;
@@ -15,6 +17,7 @@ This repository contains a set of scripts to:
 
 ## Repository structure
 
+# 01. 
 - `01_data_collection.sh` — genome download pipeline
 - `02_quality_assessment.sh` — isoform filtering and BUSCO evaluation
 - `03_phylogenetic_inference.sh` — alignment, trimming, concatenation, and IQ-TREE
@@ -79,11 +82,8 @@ bash 04_evolutionary_analyis.sh
 
 ## Important notes
 
-- The scripts were revised to reduce common syntax and path errors.
-- The project assumes that the `data/` directory and the input files already exist.
-- Some steps are computationally intensive and may require a machine with multiple cores.
-- Raw outputs generated during downloads and alignments can be large; on GitHub, it is recommended to store heavy outputs in external storage or LFS.
-
+- The scripts and data are organized to ensure data accessibility. Although all steps can be executed sequentially, we recommend running each command individually rather than executing the entire workflow at once. This approach facilitates monitoring, troubleshooting, and verification of intermediate results.
+  
 ## License
 
 This project was developed for research and evolutionary analysis. Please review the terms of the external tools and databases used before reusing the data in other contexts.
